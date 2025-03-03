@@ -28,7 +28,7 @@ from art import tprint
 
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-logger = logging.getLogger("main")
+logger = logging.getLogger("kubectl-agent")
 
 
 def kubectl(command: str) -> dict[str, str]:
@@ -147,6 +147,7 @@ def process_user_input(contents, user_input: str):
 def main():
     print(
         """
+========================================================================
 Copyright 2025 Vinayak Goyal
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -160,7 +161,8 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-"""
+========================================================================
+       """
     )
 
     tprint(text="kubectl agent")
